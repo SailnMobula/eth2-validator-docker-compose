@@ -31,7 +31,7 @@ services:
     depends_on:
       - geth
     # command: --config-file=/config/beacon.yaml
-    command: --pyrmont --p2p-host-ip={HOST_IP} --datadir=/data --http-web3provider=http://127.0.0.1:8545 --accept-terms-of-use
+    command: --pyrmont --p2p-host-ip=${HOST_IP} --datadir=/data --http-web3provider=http://127.0.0.1:8545 --accept-terms-of-use
     ports:
       - 127.0.0.1:4000:4000
       - 13000:13000/tcp
