@@ -13,11 +13,12 @@ services:
     container_name: pyrmont-geth
     restart: always
     hostname: geth
-    command: --goerli --http --http.port=8545 --http.addr=0.0.0.0 --http.vhosts="*" --allow-insecure-unlock --http.api="db,eth,net,web3,personal"
+    command: --goerli --http --http.port=8545 --http.addr=0.0.0.0 --http.vhosts="*" --allow-insecure-unlock --http.api="eth,net,web3,personal" --metrics --metrics.addr=0.0.0.0 --metrics.port=6060
     ports:
       - 30303:30303/tcp
       - 30303:30303/udp
       - 127.0.0.1:8545:8545
+      - 127.0.0.1:6060:6060
     volumes:
       - ./goethereum:/root/.ethereum
     <<: *logging
