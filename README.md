@@ -3,13 +3,13 @@
 clone the repo and change into
 
 ```
-git clone ???
+git clone https://github.com/kramerjul/eth2-validator-docker-compose.git
 ```
 
 Change into the repo and create a environment variable `PROJECT_PATH`
 
 ```
-cd ???
+cd eth2-validator-docker-compose/
 PROJECT_PATH=${pwd}
 ```
 
@@ -18,7 +18,7 @@ PROJECT_PATH=${pwd}
 Change the directory to the deployment-folder
 
 ```
-cd deployment-pyrmont
+cd deployment-pyrmont/
 ```
 
 Let's create a environment variable `DEPLOYMENT_PATH`
@@ -47,6 +47,8 @@ echo <YOUR_WALLET_PASSWORD> >> ${DEPLOYMENT_PATH}/prysm/validator/password/walle
 
 ## Get Goerli
 
+We will need to deposit 32 GörliETH to register a validator. You can request GörliETH [here](https://faucet.goerli.mudit.blog/). I recommend setting up a Metamask account before.
+
 ## Generate Keys
 
 First install the official `eth2.0-deposit-cli` in order to generate your keys
@@ -70,13 +72,14 @@ cp -r <YOUR_KEYS_PATH/validator_keys> ${DEPLOYMENT_PATH}/keys/
 
 ## Register your wallet
 
-visit the launchpad page and follow the instructions to register a validator. After that import the account with
+visit the [pyrmont-launchpad](https://pyrmont.launchpad.ethereum.org/) and follow the instructions to register a validator. After that import the account with
 
 ```
 docker-compose -f docker-compose.create-account.yml run validator-import-launchpad
 ```
 
 You can check your imported account by running
+
 ```
 docker-compose -f docker-compose.create-account.yml run validator-list-accounts
 ```
