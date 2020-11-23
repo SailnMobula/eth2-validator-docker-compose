@@ -30,13 +30,13 @@ DEPLOYMENT_PATH=${pwd}
 First create all folders
 
 ```shell
-mkdir -p ${DEPLOYMENT_PATH}/goethereum
-mkdir -p ${DEPLOYMENT_PATH}/grafana
-mkdir -p ${DEPLOYMENT_PATH}/prometheus
-mkdir -p ${DEPLOYMENT_PATH}/prysm/beaconchain
-mkdir -p ${DEPLOYMENT_PATH}/prysm/validator/passwords
-mkdir -p ${DEPLOYMENT_PATH}/prysm/validator/wallets
-mkdir -p ${DEPLOYMENT_PATH}/keys
+mkdir -p ${DEPLOYMENT_PATH}/data/goethereum
+mkdir -p ${DEPLOYMENT_PATH}/data/grafana
+mkdir -p ${DEPLOYMENT_PATH}/data/prometheus
+mkdir -p ${DEPLOYMENT_PATH}/data/prysm/beaconchain
+mkdir -p ${DEPLOYMENT_PATH}/data/prysm/validator/passwords
+mkdir -p ${DEPLOYMENT_PATH}/data/prysm/validator/wallets
+mkdir -p ${DEPLOYMENT_PATH}/data/keys
 ```
 
 Let's choose a password in order to secure your wallet which will be created later on
