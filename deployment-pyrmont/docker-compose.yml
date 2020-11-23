@@ -75,6 +75,7 @@ services:
     restart: on-failure
     container_name: pyrmont-grafana
     hostname: grafana
+    user: "1000"
     depends_on:
       - prometheus
     ports:
