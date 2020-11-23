@@ -10,7 +10,7 @@ Change into the repo and create a environment variable `PROJECT_PATH`
 
 ```
 cd eth2-validator-docker-compose/
-PROJECT_PATH=${pwd}
+PROJECT_PATH=${PWD}
 ```
 
 ## Create all folders
@@ -24,7 +24,7 @@ cd deployment-pyrmont/
 Let's create a environment variable `DEPLOYMENT_PATH`
 
 ```
-DEPLOYMENT_PATH=${pwd}
+DEPLOYMENT_PATH=${PWD}
 ```
 
 First create all folders
