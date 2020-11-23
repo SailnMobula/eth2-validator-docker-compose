@@ -67,7 +67,7 @@ Generate new validator keys. Make sure you use the correct chain. For testnet `p
 
 Copy your keys to the deployment path
 ```
-cp -r <YOUR_KEYS_PATH/validator_keys> ${DEPLOYMENT_PATH}/keys/
+cp -r <YOUR_KEYS_PATH/validator_keys> ${DEPLOYMENT_PATH}/data/keys/
 ```
 
 ## Register your wallet
