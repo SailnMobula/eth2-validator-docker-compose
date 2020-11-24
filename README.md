@@ -42,7 +42,7 @@ mkdir -p ${DEPLOYMENT_PATH}/data/keys
 Let's choose a password in order to secure your wallet which will be created later on
 
 ```
-echo <YOUR_WALLET_PASSWORD> >> ${DEPLOYMENT_PATH}/prysm/validator/password/wallet-password
+echo <YOUR_WALLET_PASSWORD> >> ${DEPLOYMENT_PATH}/data/prysm/validator/password/wallet-password
 ```
 
 ## Get Goerli
@@ -75,19 +75,25 @@ cp -r <YOUR_KEYS_PATH/validator_keys> ${DEPLOYMENT_PATH}/data/keys/
 visit the [pyrmont-launchpad](https://pyrmont.launchpad.ethereum.org/) and follow the instructions to register a validator. After that import the account with
 
 ```
-docker-compose -f docker-compose.create-account.yml run validator-import-launchpad
+sudo docker-compose -f docker-compose.create-account.yml run validator-import-launchpad
 ```
 
 You can check your imported account by running
 
 ```
-docker-compose -f docker-compose.create-account.yml run validator-list-accounts
+sudo docker-compose -f docker-compose.create-account.yml run validator-list-accounts
 ```
+
+## Add certs for nginx
+
+Add your certs to the folder `./config/nginx/certs`
+
+Change the certs name in the config file `./config/nginx/nginx.conf`
 
 ## Start everything up
 
 Start your eth1-client, beacon-chain-client, validator, prometheus and grafana with
 
 ```
-docker-compose up -d
+sudo docker-compose up -d
 ```
