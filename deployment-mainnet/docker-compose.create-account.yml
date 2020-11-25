@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   validator-import-launchpad:
-    container_name: validator-import-launchpad
+    container_name: mainnet-validator-import-launchpad
     image: gcr.io/prysmaticlabs/prysm/validator:${PRYSM_DOCKER_TAG}
     command: accounts import --keys-dir="/keys/validator_keys" --wallet-dir="/data/wallets" --wallet-password-file="/data/passwords/wallet-password" --accept-terms-of-use
     volumes:
@@ -10,7 +10,7 @@ services:
       - ./data/keys:/keys
 
   validator-list-accounts:
-    container_name: validator_list_accounts
+    container_name: mainnet-validator-list-accounts
     image: gcr.io/prysmaticlabs/prysm/validator:${PRYSM_DOCKER_TAG}
     command: accounts list --wallet-dir=/data/wallets --wallet-password-file=/data/passwords/wallet-password --accept-terms-of-use
     volumes:
