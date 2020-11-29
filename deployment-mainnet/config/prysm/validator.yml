@@ -12,4 +12,5 @@ datadir: /data/db
 wallet-dir: /data/wallets
 wallet-password-file: /data/passwords/wallet-password
 
-graffiti: ""
+# graffiti: "💊The only thing that worried me was the ether"
+graffiti: "poapo/HGke/Zlq7cqPP+aL2DUrJN0ecA"
